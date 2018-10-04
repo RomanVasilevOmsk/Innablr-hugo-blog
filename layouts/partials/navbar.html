@@ -1,0 +1,15 @@
+    <nav class="sidebar__inner" role="navigation">
+      {{ if not (eq (len .Site.Pages) 0) }}
+        <h3 class="sidebar__title">Other Posts</h3>
+        <ul class="sidebar__list">
+          {{ range $value := (where .Site.RegularPages "Type" "post").GroupByDate .Site.Params.MonthFormat }}
+          {{ $url := (index $value.Pages 0).Date.Format "2006-01" | urlize }}
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="{{ $.Site.BaseURL }}post/#{{ $url }}">{{ .Key }}<span class="sidebar__link-count"> ({{ len $value.Pages }})</span></a>
+          </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+
+    </nav>

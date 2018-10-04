@@ -1,0 +1,15 @@
+$block: '.header';
+
+#{$block} {
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 68px 0 60px;
+  @media screen and (max-width: 912px) {
+    width: 95%;
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}

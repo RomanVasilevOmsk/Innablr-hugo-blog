@@ -1,0 +1,12 @@
+<div class="posts__item">
+    {{ if .Params.imageurl }}
+        <a href="{{ .Permalink }}" class="posts__thumbnail">
+            <img src="{{ .Params.imageurl }}" alt="Image" class="posts__thumbnail-image" />
+        </a>
+    {{ end }}
+    <a href="{{ .Permalink }}" class="posts__link">{{ .Title }}</a>
+    <small class="pull-right">Posted on {{ .Date.Format "Jan 2, 2006" }}</small><br>
+    <small>{{ .Description }}</small>
+    <p>{{ .Summary }}</p>
+    <a class="posts__btn-more" href="{{ .Permalink }}">Read More<span class="fa fa-angle-double-right"></span></a>
+</div>

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=cyrillic,latin-ext');
+@import "./header";
+
+body{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+img{
+  max-width: 100%;
+}
+.container{
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  @media screen and (max-width: 912px) {
+    flex-direction: column-reverse;
+    width: 95%;
+    overflow: hidden;
+  }
+}
+
+
+.content{
+  max-width: 808px;
+  &__title{
+    font-size: 35px;
+    text-align: center;
+    border-bottom: 2px solid #4a4a4a33;
+  }
+  &__link{
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #7d39ff;
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto 30px auto;
+    padding: 11px 0;
+    box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.15);
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  & h1 {
+    font-size: 36px;
+    line-height: 1.33;
+    color: #4a4a4a;
+    font-weight: normal;
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+  & h2{
+    font-size: 28px;
+    line-height: 1.33;
+    font-weight: normal;
+    color: #4a4a4a;
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+  & p{
+    font-size: 22px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.55;
+    letter-spacing: -0.2px;
+    color: #9b9b9b;
+    margin-top: 11px;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.posts{
+  &__item{
+    margin-bottom: 100px;
+    @media screen and (max-width: 912px) {
+     margin-bottom: 40px;
+    }
+  }
+  &__thumbnail{
+  }
+  &__link{
+    font-size: 36px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.33;
+    color: #4a4a4a;
+  }
+  &__btn-more{
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #7d39ff;
+    box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.15);
+    padding: 16px 68px;
+    text-align: center;
+    display: inline-block;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      display: block;
+    }
+  }
+}
+.post{
+  margin-bottom: 100px;
+  &__thumbnail{
+    margin-bottom: 22px;
+  }
+}
+.sidebar{
+  background-color: #FAFAFA;
+  width: 330px;
+  @media screen and (max-width: 912px) {
+    width: 100%;
+  }
+  &__title{
+    font-size: 27px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.78;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    margin-bottom: 16px;
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+  }
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__inner{
+    padding: 13px 0 40px 45px;
+    position: fixed;
+    background-color: #FAFAFA;
+    width: 330px;
+    @media screen and (max-width: 912px) {
+      position: relative;
+      width: 100%;
+    }
+  }
+  &__item{
+    margin-bottom: 5px;
+  }
+  &__link{
+    font-size: 22px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.55;
+    letter-spacing: -0.2px;
+    color: #9b9b9b;
+    text-decoration: none;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer{
+  display: flex;
+  background-color: #4a4a4a;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  &__copyright{
+    font-size: 14px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #9b9b9b;
+    font-weight: 300;
+    margin-right: 30px;
+  }
+  &__link{
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #9b9b9b;
+    text-decoration: none;
+    margin-right: 30px;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+<body>
+<header class="header" >
+    <div class="header__inner">
+        <a href="/" class="logo">
+            <img src="./images/logo-image.png" srcset="./images/logo-image@2x.png 2x, ./images/logo-image@3x.png 3x" alt="Image" class="img-responsive">
+        </a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="content">
+
+    {{ range $index,$data := first 10 (where .Data.Pages "Type" "post") }}
+        {{ partial "article.html" $data }}
+    {{ end }}
+
+        <a class="content__link" href="{{ .Site.BaseURL }}post/">Load more posts</a>
+    </div>
+
+
+    <div class="sidebar">
+    {{ partial "navbar.html" . }}
+    </div>
+</div>
+{{ partial "footer.html" . }}
